@@ -131,6 +131,10 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         _tts.speak(beforeReadingText+time+afterReadingText, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+    public void onUtteranceCompleted(String utteranceId) {
+        Log.i(TAG, utteranceId); //utteranceId == "SOME MESSAGE"
+    }
+
     public void onInit(int status){
 
     }
